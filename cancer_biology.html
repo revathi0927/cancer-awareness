@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Biology of Cancer</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Comic Sans MS", cursive;
+      background-color: #eef5f9;
+    }
+
+    /* NAVBAR */
+    .navbar {
+      background-color: #1565c0;
+      padding: 15px;
+      text-align: center;
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      margin: 15px;
+      font-size: 20px;
+    }
+
+    .navbar a:hover {
+      color: #ffd54f;
+    }
+
+    /* HEADER */
+    header {
+      background-color: #0d47a1;
+      color: white;
+      text-align: center;
+      padding: 35px;
+    }
+
+    header h1 {
+      font-size: 48px;
+      margin: 0;
+    }
+
+    header p {
+      font-size: 20px;
+      margin-top: 10px;
+    }
+
+    /* MAIN SECTION */
+    section {
+      padding: 40px;
+    }
+
+    .mainbox {
+      background: white;
+      max-width: 900px;
+      margin: auto;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      color: #e91e63;
+      margin-top: 30px;
+    }
+
+    p {
+      line-height: 1.6;
+      font-size: 18px;
+    }
+
+    ul {
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    .fact {
+      background: #fce4ec;
+      padding: 10px;
+      border-left: 5px solid #e91e63;
+      margin-top: 15px;
+      border-radius: 5px;
+    }
+
+    /* GENE CARDS */
+    .cell-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .cell-card {
+      background: #bbdefb;
+      width: 220px;
+      padding: 15px;
+      border-radius: 10px;
+      text-align: center;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .cell-card:hover {
+      background: #90caf9;
+      transform: scale(1.05);
+    }
+
+    .cell-icon {
+      font-size: 40px;
+    }
+
+    .cell-name {
+      margin-top: 10px;
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    .popup {
+      display: none;
+      background: #fce4ec;
+      padding: 12px;
+      margin-top: 5px;
+      border-left: 5px solid #e91e63;
+      border-radius: 6px;
+      font-size: 16px;
+    }
+  </style>
+</head>
+
+<body> <!-- NAVIGATION BAR -->
+    <div class="navbar"> <a href="index.html">Home</a> <a href="cancer_biology.html">Biology of Cancer</a> <a
+      href="cancer_incidence.html">Cancer Incidence</a> <a href="risk_factors.html">Risk Factors</a> <a
+      href="cancer_prevention_measures.html">Prevention</a> <a href="about_me.html">About Me</a> </div> <!-- HEADER -->
+  <header>
+    <h1>Biology of Cancer</h1>
+    <p>Understanding How Cancer Develops and Spreads</p>
+  </header> <!-- MAIN CONTENT -->
+  <section>
+    <div class="mainbox">
+      <h2>Definition</h2>
+      <p> Cancer is a group of diseases in which abnormal cells grow uncontrollably and crowd out normal healthy cells
+        in the body. These abnormal cells develop because of changes or mutations in genes (DNA), which control how
+        cells grow, divide, and function. </p>
+      <p> Normally, cells grow in a controlled way and die when they become damaged or old, but cancer cells continue to
+        survive and multiply. </p>
+      <div class="fact"> Small fact: The word “cancer” comes from the Greek word “karkinos,” meaning crab. </div>
+      <h2>What Causes Cancer?</h2>
+      <p> Cancer begins when the normal process of cell division goes wrong. These changes may happen because of
+        inherited genetic mutations, harmful chemicals, radiation, smoking, unhealthy lifestyle habits, or sometimes
+        without any clear reason. </p>
+      <div class="fact"> Small fact: Scientists have found evidence of cancer even in ancient fossils. </div>
+      <h2>Types of Genes</h2>
+      <div class="cell-container">
+        <div class="cell-card" onclick="toggle('c1')">
+          <div class="cell-icon">🧬</div>
+          <div class="cell-name">Proto-oncogenes</div>
+        </div>
+        <div id="c1" class="popup"> Proto-oncogenes help normal cells grow and divide. When these genes mutate, they can
+          become oncogenes and cause uncontrolled cell growth. </div>
+        <div class="cell-card" onclick="toggle('c2')">
+          <div class="cell-icon">🛡️</div>
+          <div class="cell-name">Tumor Suppressor Genes</div>
+        </div>
+        <div id="c2" class="popup"> Tumor suppressor genes normally stop cells from dividing too quickly. When damaged,
+          cells may grow uncontrollably. </div>
+        <div class="cell-card" onclick="toggle('c3')">
+          <div class="cell-icon">🔧</div>
+          <div class="cell-name">DNA Repair Genes</div>
+        </div>
+        <div id="c3" class="popup"> DNA repair genes help fix damaged DNA. When these genes fail to work properly,
+          mutations can build up and increase cancer risk. </div>
+      </div>
+      <div class="fact"> Small fact: Cancer usually develops after multiple genetic changes over time. </div>
+      <h2>Types of Cancer</h2>
+      <p> Cancer can be classified based on the type of cells where it begins. </p>
+      <ul>
+        <li>Carcinomas – Start in skin or organ linings</li>
+        <li>Sarcomas – Begin in bones or connective tissues</li>
+        <li>Blood cancers – Affect blood and bone marrow</li>
+      </ul>
+      <div class="fact"> Small fact: There are more than 100 different types of cancer. </div>
+      <h2>Cancer Stages</h2>
+      <p> <b>Low Stage (Stage 1–2)</b><br> Cancer is still small and has not spread very far. </p>
+      <p> <b>High Stage (Stage 3–4)</b><br> Cancer has spread further into nearby tissues or other body parts. </p>
+      <h2>How Cancer Spreads</h2>
+      <p> Cancer cells can break away from the original tumor and travel through the blood or lymphatic system to
+        different parts of the body. This process is called metastasis. </p>
+      <h2>Why Understanding Cancer Matters</h2>
+      <p> Different cancers behave differently. Some grow slowly while others spread rapidly. Understanding the biology
+        of cancer helps doctors choose treatments such as surgery, chemotherapy, radiation therapy, or immunotherapy.
+      </p>
+    </div>
+  </section>
+  <script>        function toggle(id) { let x = document.getElementById(id); if (x.style.display === "block") { x.style.display = "none"; } else { x.style.display = "block"; } }    </script>
+</body>
+
+</html>
